@@ -19,6 +19,8 @@ This dashboard helps analyze air quality by visualizing different pollutants (PM
 
 The analysis provides actionable insights into the quality of air in different regions and how environmental factors such as wind speed influence the spread of pollutants.
 
+**You can access the live dashboard here: [Air Quality Dashboard on Streamlit Cloud](https://airquality-ai.streamlit.app/)**.
+
 ## Features
 - **Pollutant Visualization by Location:** Shows air quality across different monitoring stations.
 - **Weekdays vs. Weekends Comparison:** Compares pollution levels on weekdays and weekends.
@@ -60,6 +62,7 @@ Once you have installed the required dependencies, you can run the dashboard loc
     ```bash
     http://localhost:8501
 
+Or visit the deployed version at https://airquality-ai.streamlit.app/.
 
 ## Dataset
 The dataset used in this project includes daily measurements of air pollutants collected from various air quality monitoring stations. The key columns include:
@@ -95,6 +98,6 @@ For any questions or feedback, feel free to reach out to:
 
 **Author:** Aini Azzah
 
-**Email:** aini.azzah@example.com
+**Email:** ainiazzah22@gmail.com
 
-**ID Dicoding:** aini_azzah
+**ID Dicoding:** Aini Azzah
