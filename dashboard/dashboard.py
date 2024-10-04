@@ -3,11 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-# Mengatur gaya seaborn
 sns.set(style='dark')
 data = pd.read_csv("main_data.csv")
 
-# Menambahkan kolom date dan Day_Type
 data['date'] = pd.to_datetime(data[['year', 'month', 'day']])
 data['Day_Type'] = data['date'].dt.dayofweek.apply(lambda x: 'Weekend' if x >= 5 else 'Weekday')
 
@@ -50,14 +48,13 @@ def plot_wind_effect(data):
     plt.tight_layout()
     st.pyplot(fig)
 
-# Judul Dashboard
+
 st.title('Dashboard Analisis Kualitas Udara 🌿💨')
 
-# Sidebar untuk informasi penulis
 st.sidebar.header('🌟 Author info : 🌟')
 st.sidebar.write("👤 Nama: Aini Azzah")
-st.sidebar.write("📧 Email: aini.azzah@example.com")
-st.sidebar.write("🆔 ID Dicoding: aini_azzah")
+st.sidebar.write("📧 Email: ainiazzah22@gmail.com")
+st.sidebar.write("🆔 ID Dicoding: Aini Azzah")
 st.sidebar.write("---") 
 st.sidebar.write("📚 Selamat datang di dashboard analisis kualitas udara! ")
 st.sidebar.write("📝 Temukan pola, perbandingan, dan pengaruh polusi udara di sini. ✨")
