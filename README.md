@@ -54,10 +54,13 @@ Follow these steps to set up and run the project locally:
 ## How to Run the Dashboard
 Once you have installed the required dependencies, you can run the dashboard locally by following these steps:
 
-1. **Run the Streamlit application:**
+1. **Access data on dashboard directory**
+    ```bash
+    cd dashboard
+2. **Run the Streamlit application:**
     ```bash
     streamlit run app.py
-2. **Access the dashboard:**
+3. **Access the dashboard:**
     After running the above command, Streamlit will launch a local web server. You can view the dashboard in your browser at:
     ```bash
     http://localhost:8501

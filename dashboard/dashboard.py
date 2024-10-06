@@ -38,17 +38,60 @@ def plot_weekdays_vs_weekends(data):
 
 # Q3: Visualisasi pengaruh kecepatan angin
 def plot_wind_effect(data):
-    fig, ax = plt.subplots(figsize=(12, 6))
-    sns.scatterplot(data=data, x='WSPM', y='PM2.5', color='blue', label='PM2.5', s=100, ax=ax)
-    sns.scatterplot(data=data, x='WSPM', y='O3', color='orange', label='O3', s=100, ax=ax)
-    ax.set_title('🌬️ Pengaruh Kecepatan Angin terhadap Konsentrasi Polutan', fontsize=16)
-    ax.set_ylabel('Konsentrasi Polutan (μg/m³)', fontsize=12)
-    ax.set_xlabel('Kecepatan Angin (m/s)', fontsize=12)
-    ax.legend(fontsize=10)
+    fig = plt.figure(figsize=(12, 8))
+
+    # PM2.5
+    plt.subplot(2, 3, 1)
+    sns.scatterplot(data=data, x='WSPM', y='PM2.5', hue='wd', palette='Set1', alpha=0.7, legend=False)
+    plt.title('Hubungan Kecepatan Angin dengan PM2.5')
+    plt.xlabel('Kecepatan Angin (m/s)')
+    plt.ylabel('Konsentrasi PM2.5 (µg/m³)')
+
+    # PM10
+    plt.subplot(2, 3, 2)
+    sns.scatterplot(data=data, x='WSPM', y='PM10', hue='wd', palette='Set1', alpha=0.7, legend=False)
+    plt.title('Hubungan Kecepatan Angin dengan PM10')
+    plt.xlabel('Kecepatan Angin (m/s)')
+    plt.ylabel('Konsentrasi PM10 (µg/m³)')
+
+    # NO2
+    plt.subplot(2, 3, 3)
+    sns.scatterplot(data=data, x='WSPM', y='NO2', hue='wd', palette='Set1', alpha=0.7, legend=False)
+    plt.title('Hubungan Kecepatan Angin dengan NO2')
+    plt.xlabel('Kecepatan Angin (m/s)')
+    plt.ylabel('Konsentrasi NO2 (µg/m³)')
+
+    # SO2
+    plt.subplot(2, 3, 4)
+    sns.scatterplot(data=data, x='WSPM', y='SO2', hue='wd', palette='Set1', alpha=0.7, legend=False)
+    plt.title('Hubungan Kecepatan Angin dengan SO2')
+    plt.xlabel('Kecepatan Angin (m/s)')
+    plt.ylabel('Konsentrasi SO2 (µg/m³)')
+
+    # O3
+    plt.subplot(2, 3, 5)
+    sns.scatterplot(data=data, x='WSPM', y='O3', hue='wd', palette='Set1', alpha=0.7, legend=False)
+    plt.title('Hubungan Kecepatan Angin dengan O3')
+    plt.xlabel('Kecepatan Angin (m/s)')
+    plt.ylabel('Konsentrasi O3 (µg/m³)')
+
+    # keterangan warna
+    plt.subplot(2, 3, 6)
+    plt.axis('off')  
+    plt.title('Keterangan Warna', fontsize=12, weight='bold')
+    plt.text(0, 0.8, 'Merah: Utara (N)', fontsize=10, color='red')
+    plt.text(0, 0.6, 'Hijau: Timur (E)', fontsize=10, color='green')
+    plt.text(0, 0.4, 'Biru: Selatan (S)', fontsize=10, color='blue')
+    plt.text(0, 0.2, 'Kuning: Barat (W)', fontsize=10, color='yellow')
+    plt.text(0, 0, 'Ungu: Barat Daya (WSW)', fontsize=10, color='purple')
+    plt.text(0, -0.2, 'Cyan: Barat Laut (WNW)', fontsize=10, color='cyan')
+    plt.text(0, -0.4, 'Orange: Timur Laut (ENE)', fontsize=10, color='orange')
+    plt.text(0, -0.6, 'Pink: Tenggara (SE)', fontsize=10, color='pink')
+
     plt.tight_layout()
     st.pyplot(fig)
 
-
+# Layout Streamlit
 st.title('Dashboard Analisis Kualitas Udara 🌿💨')
 
 st.sidebar.header('🌟 Author info : 🌟')
