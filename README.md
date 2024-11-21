@@ -94,13 +94,3 @@ Shows the relationship between wind speed and pollutant concentrations, visualiz
 ## Conclusion
 
 This project provides meaningful insights into air quality based on location, time, and meteorological factors. By visualizing the data, we can better understand how human activity and natural conditions influence pollution levels.
-
-## Contact
-
-For any questions or feedback, feel free to reach out to:
-
-**Author:** Aini Azzah
-
-**Email:** ainiazzah22@gmail.com
-
-**ID Dicoding:** Aini Azzah
