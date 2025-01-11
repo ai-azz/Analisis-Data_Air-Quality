@@ -12,7 +12,6 @@ The dashboard is built using **Streamlit**, **Pandas**, **Seaborn**, and **Matpl
 5. [Dataset](#dataset)
 6. [Visualizations](#visualizations)
 7. [Conclusion](#conclusion)
-8. [Contact](#contact)
 
 ## Project Overview
 This dashboard helps analyze air quality by visualizing different pollutants (PM2.5, PM10, NO2, SO2, CO, and O3) collected from various monitoring stations. The project explores patterns in pollution based on location, compares pollution levels between weekdays and weekends, and investigates the effect of wind speed on pollutant concentration.
